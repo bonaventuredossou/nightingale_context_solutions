@@ -15,14 +15,14 @@ The notebook to create the dataset is [here](project/DataCreation.ipynb), and th
 
 # Modeling Approach
 
-For the modeling, I have first of tried many vision models, 10 of them to be specific: `[resnetX]`(https://pytorch.org/vision/main/models/resnet.html) where `X={18, 50, 152}`, `[efficientnetV2-m]`(https://pytorch.org/vision/stable/models/efficientnetv2.html), `[ConvNext-base]`(https://pytorch.org/vision/stable/models/convnext.html), `[wide-resnet101_v2]`(https://pytorch.org/vision/stable/models/wide_resnet.html), `[vgg19_bn]`(https://pytorch.org/vision/stable/models/vgg.html), `[regnet_x_32gf]`(https://pytorch.org/vision/stable/models/generated/torchvision.models.regnet_x_32gf.html), `[swin_b]`(https://pytorch.org/vision/stable/models/generated/torchvision.models.swin_b.html), 
-and `[maxvit]`(https://pytorch.org/vision/stable/models/maxvit.html). They are all high-performing computer vision models. I chose those models size specially so that I could cope with the available RAM memory available.
+For the modeling, I have first of tried many vision models, 10 of them to be specific: [resnetX](https://pytorch.org/vision/main/models/resnet.html) where `X={18, 50, 152}`, [efficientnetV2-m](https://pytorch.org/vision/stable/models/efficientnetv2.html), [ConvNext-base](https://pytorch.org/vision/stable/models/convnext.html), [wide-resnet101_v2](https://pytorch.org/vision/stable/models/wide_resnet.html), [vgg19_bn](https://pytorch.org/vision/stable/models/vgg.html), [regnet_x_32gf](https://pytorch.org/vision/stable/models/generated/torchvision.models.regnet_x_32gf.html), `[swin_b]`(https://pytorch.org/vision/stable/models/generated/torchvision.models.swin_b.html), 
+and [maxvit](https://pytorch.org/vision/stable/models/maxvit.html). They are all high-performing computer vision models. I chose those models size specially so that I could cope with the available RAM memory available.
 
 I finetuned `entirely` each model (instead of just updating the reshaped layer which in most cases is the classifier layer)
 I experimented every model with various learning rates, with the `AdamW` optimizer. The performances are summarized in the table below (for 50 training epochs, and `batch_size` of 32 - after experiments with different values, that was the optimal one):
 
 Model | resnet18 | resnet50 | resnet152 | efficientnet_m | convnext_base | wide_resnet101_v2 | vgg19_bn | regnet_x_32gf | swin_b | maxvit |
-|:---: |:---: |:---: | :---: |:---: | :---: | :---: | :---: | :---: |
+|:---: |:---: |:---: | :---: |:---: | :---: | :---: | :---: | :---: | :---: | :---: |
 `lr = 1e-4` | 1.009611 | **0.97050** | 1.005862| 0.9258 | 1.0099 | **0.9312** | **0.939045** | 0.992109 | 0.898370 | **0.855656** |
 `lr = 1e-5` | **1.001620** | 1.008508 | **1.00190** | 0.9879 | **0.9574** | 1.012101 | 0.994687 | **0.988756** | **0.897878** | 0.893357 |
 `lr = 4e-4` | 1.020936 | 0.986704 | 1.007281 | **0.8297** | 1.1101 | **1.0339** | 1.107765 | 1.000450 | 1.231371 | 1.098370 |
@@ -30,3 +30,41 @@ Model | resnet18 | resnet50 | resnet152 | efficientnet_m | convnext_base | wide_
 The best learning rate for each model are set in **bold*. My solution is a `Deep Ensemble` model (combination of several models). The folder `project/best_final_weights` contains the best weights of each model, respectively with hyperparameters explained above. In the folder `project/best_predictions` there are all submitted files, including the [best-scoring](project/best_predictions/final_predictions_deep_ensemble_32_50_with_AdamW_28.csv) on the leaderboard. The best scoring file is **only** combining the average predicitions of models which have losses < 1. The folder `project/pretrained_weights` contains initial pretrained weights (before adaptation to our problem).
 
 The modeling notebook can be found [here](project/Modeling.ipynb)
+
+# Citations
+Please cite these papers if you use this work:
+
+- @inproceedings{
+dossou2023pretrained,
+title={Pretrained Vision Models for Predicting High-Risk Breast Cancer Stage},
+author={Bonaventure F. P. Dossou and Yeno Gbenou and Miglanche Ghomsi},
+booktitle={2023 ICLR First Workshop on {\textquotedblleft}Machine Learning {\&} Global Health{\textquotedblright}},
+year={2023},
+url={https://openreview.net/forum?id=pWAJGO_HZe}
+} 
+
+This will be updated by a later possible arxiv link
+
+- @article{nightingale2022,
+  author = {Mullainathan, Sendhil and Obermeyer, Ziad},
+  title = {Solving medicine's data bottleneck: Nightingale Open Science},
+  journal = {Nature Medicine},
+  year = {2022},
+  month = may,
+  day = {01},
+  volume = {28},
+  number = {5},
+  pages = {897-899},
+  issn = {1546-170X},
+  doi = {10.1038/s41591-022-01804-4},
+  url = {https://doi.org/10.1038/s41591-022-01804-4}
+}
+
+- @dataset{brca-psj-path,
+  author = {Bifulco, Carlo and Piening, Brian and Bower, Tucker and Robicsek, Ari and Weerasinghe, Roshanthi and Lee, Soohee and Foster, Nick and Juergens, Nathan and Risley, Josh and Nachimuthu, Senthil and Haynes, Katy and Obermeyer, Ziad},
+  title = {Identifying high-risk breast cancer using digital pathology images},
+  publisher = {Nightingale Open Science},
+  year = {2021},
+  doi = {10.48815/N5159B},
+  url = {https://doi.org/10.48815/N5159B}
+}
