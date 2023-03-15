@@ -22,7 +22,7 @@ I finetuned `entirely` each model (instead of just updating the reshaped layer w
 I experimented every model with various learning rates, with the `AdamW` optimizer. The performances are summarized in the table below (for 50 training epochs, and `batch_size` of 32 - after experiments with different values, that was the optimal one):
 
 Model | resnet18 | resnet50 | resnet152 | efficientnet_m | convnext_base | wide_resnet101_v2 | vgg19_bn | regnet_x_32gf | swin_b | maxvit |
-|:---: |:---: |:---: | :---: |:---: | :---: | :---: | :---: | :---: |
+|:---: |:---: |:---: | :---: |:---: | :---: | :---: | :---: | :---: | :---: | :---: |
 `lr = 1e-4` | 1.009611 | **0.97050** | 1.005862| 0.9258 | 1.0099 | **0.9312** | **0.939045** | 0.992109 | 0.898370 | **0.855656** |
 `lr = 1e-5` | **1.001620** | 1.008508 | **1.00190** | 0.9879 | **0.9574** | 1.012101 | 0.994687 | **0.988756** | **0.897878** | 0.893357 |
 `lr = 4e-4` | 1.020936 | 0.986704 | 1.007281 | **0.8297** | 1.1101 | **1.0339** | 1.107765 | 1.000450 | 1.231371 | 1.098370 |
