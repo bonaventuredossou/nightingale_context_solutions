@@ -1,8 +1,10 @@
 # [Identifying High-risk Breast Cancer Using Digital Pathology Images](https://app.nightingalescience.org/contests/3jmp2y128nxd)
-    - Solution of [Bonaventure F. P. Dossou](https://bonaventuredossou.github.io/)
-**Disclaimer: All pretrained-models I used for the final solution are open-source, and pretrained on open-source datasets (ImageNet V1 and ImageNet V2). If you are using this repository, make sure you created the necessary folders (most would be auto-created for you though)**
 
-# Install required libraries with `pip intall -r requirements.txt`
+**Solution of [Bonaventure F. P. Dossou](https://bonaventuredossou.github.io/)
+
+Disclaimer: All pretrained-models I used for the final solution are open-source, and pretrained on open-source datasets (ImageNet V1 and ImageNet V2). If you are using this repository, make sure you created the necessary folders (most would be auto-created for you though)
+
+**Install required libraries with `pip intall -r requirements.txt`
 
 # Data Creation
 
