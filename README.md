@@ -36,10 +36,9 @@ The modeling notebook can be found [here](project/Modeling.ipynb)
 # Citations
 Please cite these papers if you use this work:
 
-- @inproceedings{
-dossou2023pretrained,
+- @inproceedings{dossou2023pretrained,
 title={Pretrained Vision Models for Predicting High-Risk Breast Cancer Stage},
-author={Bonaventure F. P. Dossou and Yeno Gbenou and Miglanche Ghomsi},
+author={Bonaventure F. P. Dossou and Yenoukoume S. K. Gbenou and Miglanche Ghomsi Nono},
 booktitle={2023 ICLR First Workshop on {\textquotedblleft}Machine Learning {\&} Global Health{\textquotedblright}},
 year={2023},
 url={https://openreview.net/forum?id=pWAJGO_HZe}
