@@ -37,14 +37,15 @@ The modeling notebook can be found [here](project/Modeling.ipynb)
 Please cite these papers if you use this work:
 
 - @inproceedings{dossou2023pretrained,
-title={Pretrained Vision Models for Predicting High-Risk Breast Cancer Stage},
-author={Bonaventure F. P. Dossou and Yenoukoume S. K. Gbenou and Miglanche Ghomsi Nono},
-booktitle={2023 ICLR First Workshop on {\textquotedblleft}Machine Learning {\&} Global Health{\textquotedblright}},
-year={2023},
-url={https://openreview.net/forum?id=pWAJGO_HZe}
+    title={Pretrained Vision Models for Predicting High-Risk Breast Cancer Stage},
+    author={Bonaventure F. P. Dossou and Yenoukoume S. K. Gbenou and Miglanche Ghomsi Nono},
+    booktitle={2023 ICLR First Workshop on Machine Learning {\&} Global Health},
+    year={2023},
+    url={https://arxiv.org/abs/2303.10730},
+    eprint={2303.10730},
+    archivePrefix={arXiv},
+    primaryClass={eess.IV}
 } 
-
-This will be updated by a later possible arxiv link
 
 - @article{nightingale2022,
   author = {Mullainathan, Sendhil and Obermeyer, Ziad},
