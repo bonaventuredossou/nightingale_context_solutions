@@ -1,4 +1,4 @@
-# [Identifying High-risk Breast Cancer Using Digital Pathology Images](https://app.nightingalescience.org/contests/3jmp2y128nxd)
+# [Identifying High-risk Breast Cancer Using Digital Pathology Images Phase 1](https://app.nightingalescience.org/contests/3jmp2y128nxd)
 
 **Solution of [Bonaventure F. P. Dossou](https://bonaventuredossou.github.io/)
 
@@ -29,9 +29,15 @@ Model | resnet18 | resnet50 | resnet152 | efficientnet_m | convnext_base | wide_
 `lr = 1e-5` | **1.001620** | 1.008508 | **1.00190** | 0.9879 | **0.9574** | 1.012101 | 0.994687 | **0.988756** | **0.897878** | 0.893357 |
 `lr = 4e-4` | 1.020936 | 0.986704 | 1.007281 | **0.8297** | 1.1101 | **1.0339** | 1.107765 | 1.000450 | 1.231371 | 1.098370 |
 
-The best learning rate for each model are set in **bold*. My solution is a `Deep Ensemble` model (combination of several models). The folder `project/best_final_weights` contains the best weights of each model, respectively with hyperparameters explained above. In the folder `project/best_predictions` there are all submitted files, including the [best-scoring](project/best_predictions/final_predictions_deep_ensemble_32_50_with_AdamW_28.csv) on the leaderboard. The best scoring file is **only** combining the average predicitions of models which have losses < 1. The folder `project/pretrained_weights` contains initial pretrained weights (before adaptation to our problem).
+The best learning rate for each model are set in **bold*. My solution is a `Deep Ensemble` model (combination of several models). The folder `project/best_final_weights` contains the best weights of each model, respectively with hyperparameters explained above. The best scoring file is **only** combining the average predicitions of models which have losses < 1. The folder `project/pretrained_weights` contains initial pretrained weights (before adaptation to our problem).
 
 The modeling notebook can be found [here](project/Modeling.ipynb)
+
+# Update about the [Phase 2](https://app.nightingalescience.org/contests/vd8g98zv9w0p) of the context
+
+# Best Solution Approach
+
+My best solution for this phase of the context, is to directly evaluate on the adapted pretrained computer vision models trained and obtained from the Phase 1 of the context. Training on phase 1 and phase two datasets merged, did not perform well compared to the approach stated above. For more details about the modeling, please refer to my [phase 1 solution](https://github.com/bonaventuredossou/nightingale_winning_solution). The adapted modeling notebook can be found [here](project/Modeling_Phase_2.ipynb).
 
 # Citations
 Please cite these papers if you use this work:
