@@ -1,4 +1,4 @@
-Copyright [2023] Wombcare Team (Yenoukoume S. K. Gbenou, Bonaventure F. P. Dossou, Miglanche Ghomsi Nono)
+Copyright [2023] [Bonaventure F. P. Dossou](https://bonaventuredossou.github.io/)
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
