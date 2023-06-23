@@ -40,13 +40,9 @@ The modeling notebook can be found [here](project/Modeling.ipynb)
 My best solution for this phase of the context, is to directly evaluate on the adapted pretrained computer vision models trained and obtained from the Phase 1 of the context. Training on phase 1 and phase two datasets merged, did not perform well compared to the approach stated above. For more details about the modeling, please refer to my [phase 1 solution](https://github.com/bonaventuredossou/nightingale_winning_solution). The adapted modeling notebook can be found [here](project/Modeling_Phase_2.ipynb).
 
 
-Bonaventure Dossou <femipancrace.dossou@gmail.com>
-1:29 AM (3 minutes ago)
-to me
-
 # 3 - Update about the [AIM-AHEAD Health Equity Data Challenge 2023](https://app.nightingalescience.org/contests/8lo46ovm2g1j)
 
-# Our Solution Approach
+# Wombcare Team Solution
 
 - For our modeling we tried the following:
     - computed the means and standard deviations across the datasets, that we used for the transformation of our input images

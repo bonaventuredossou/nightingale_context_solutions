@@ -1,4 +1,4 @@
-# Solution of Wombcare Team (Yenoukoume S. K. Gbenou, Bonaventure F. P. Dossou, Miglanche Ghomsi Nono) for the [AIM-AHEAD Health Equity Data Challenge 2023](https://app.nightingalescience.org/contests/8lo46ovm2g1j)
+# Solution of Wombcare Team (Yenoukoume S. K. Gbenou, Bonaventure F. P. Dossou) for the [AIM-AHEAD Health Equity Data Challenge 2023](https://app.nightingalescience.org/contests/8lo46ovm2g1j)
 
 # Solution Approach
 
