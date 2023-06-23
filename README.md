@@ -42,7 +42,7 @@ My best solution for this phase of the context, is to directly evaluate on the a
 
 # 3 - Update about the [AIM-AHEAD Health Equity Data Challenge 2023](https://app.nightingalescience.org/contests/8lo46ovm2g1j)
 
-# Wombcare Team Solution
+# [Wombcare Team Solution](https://github.com/bonaventuredossou/wombare_nightingale_context_solutions/tree/ami_ahead_wombcare_team)
 
 - For our modeling we tried the following:
     - computed the means and standard deviations across the datasets, that we used for the transformation of our input images
